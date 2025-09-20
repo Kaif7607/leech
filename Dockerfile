@@ -1,3 +1,5 @@
+
+
 FROM python:3.10.8-slim-buster
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -6,7 +8,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        gcc \
        libffi-dev \
-       musl-tools \   # ✅ use musl-tools (Debian) instead of musl-dev (Alpine)
+       musl-tools \
        ffmpeg \
        aria2 \
     && apt-get clean \
