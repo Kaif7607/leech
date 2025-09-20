@@ -1,6 +1,6 @@
 
 
-FROM python:3.10.8-slim-buster
+FROM python:3.10-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -19,3 +19,4 @@ WORKDIR /app/
 RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
 
 CMD gunicorn app:app & python3 main.py
+
